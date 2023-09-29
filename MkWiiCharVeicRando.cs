@@ -48,6 +48,7 @@ internal class MKWiiCharVeicRando
                     case 7:
                         sb.Append("Tartosso\nVeicolo: ");
                         break;
+                    //lightweights range from ID 0 to ID 7
                     case 8:
                         sb.Append("Mario\nVeicolo: ");
                         break;
@@ -72,6 +73,12 @@ internal class MKWiiCharVeicRando
                     case 15:
                         sb.Append("Bowser Junior\nVeicolo: ");
                         break;
+                    //middleweights range from ID 8 to ID 15
+                    //Mii Outfit A & B are special cases; they get their own ID.
+                    //I usually have middleweight Miis, but not everyone does.
+                    //This should be added as a feature, maybe don't ask the user every time but have a config file?
+                    //Maybe if the program is actually used I might implement such a feature, but for now I'll assume
+                    //That Miis are all middleweight. Feel free to open an issue if you care.
                     case 16:
                         sb.Append("Wario\nVeicolo: ");
                         break;
@@ -106,7 +113,7 @@ internal class MKWiiCharVeicRando
                         Console.WriteLine("Opzione non riconosciuta: "+currentCharacterID);
                         break;
                 }
-            if (currentCharacterID >= 0 && currentCharacterID <= 6)
+            if (currentCharacterID >= 0 && currentCharacterID <= 7)
             { //lightweight
                 switch (currentVeichleID){
                     case 0:
@@ -150,7 +157,7 @@ internal class MKWiiCharVeicRando
                         break;                        
                 }
             }
-            else if ((currentCharacterID > 6 && currentCharacterID <= 15) || currentCharacterID == 24 || currentCharacterID == 25)
+            else if ((currentCharacterID > 7 && currentCharacterID <= 16) || currentCharacterID == 24 || currentCharacterID == 25)
             { //middleweight
                     switch (currentVeichleID){
                     case 0:
