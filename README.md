@@ -1,5 +1,5 @@
 # MkWii Character and Veichle Randomizer
-A tool to randomly extract character and veichle combinations for Mario Kart Wii.
+A tool to randomly generate character and veichle combinations for Mario Kart Wii.
 
 # What is it?
 This is a program to randomly extract any character and veichle combination for Mario Kart Wii.
