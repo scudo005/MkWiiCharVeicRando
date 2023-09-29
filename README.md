@@ -15,7 +15,7 @@ First of all, you'll need to have the .NET 7.0 SDK installed. Then, clone the re
     
 Then, build with `dotnet build`.
 
-Your compiled files will be in `bin\bin\Debug\net7.0`.
+Your compiled binaries will be in `bin\bin\Debug\net7.0`.
 
 # Notes
 
