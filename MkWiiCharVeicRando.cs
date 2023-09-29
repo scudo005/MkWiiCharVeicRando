@@ -8,7 +8,7 @@ internal class MKWiiCharVeicRando
         var rng = new Random();
     InsertNoPlayers:
         Console.WriteLine("Inserire il numero di giocatori: ");
-        int numberOfPlayers = int.Parse(Console.ReadLine());
+        int numberOfPlayers = int.Parse(Console.ReadLine()!);
         if (numberOfPlayers > 12 || numberOfPlayers <= 0)
         {
             Console.WriteLine("Hai inserito un numero impossibile di giocatori. ");
