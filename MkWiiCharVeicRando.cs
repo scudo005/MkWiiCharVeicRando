@@ -157,7 +157,7 @@ internal class MKWiiCharVeicRando
                         break;                        
                 }
             }
-            else if ((currentCharacterID > 7 && currentCharacterID <= 16) || currentCharacterID == 24 || currentCharacterID == 25)
+            else if ((currentCharacterID => 8 && currentCharacterID <= 15) || currentCharacterID == 24 || currentCharacterID == 25)
             { //middleweight
                     switch (currentVeichleID){
                     case 0:
@@ -201,7 +201,7 @@ internal class MKWiiCharVeicRando
                         break;                        
                 }
             }
-            else if (currentCharacterID > 15 && currentCharacterID <= 23)
+            else if (currentCharacterID => 16 && currentCharacterID <= 23)
             {  //heavyweight
                 switch (currentVeichleID){
                     case 0:
