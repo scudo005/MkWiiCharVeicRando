@@ -21,7 +21,7 @@ internal class MKWiiCharVeicRando
             currentVeichleID = rng.Next(0, 11);
             var sb = new System.Text.StringBuilder();
             int j = i+1; 
-            sb.Append("Player no." + j + ": Character: ");
+            sb.Append("Player no." + j + ":\nCharacter: ");
                 switch (currentCharacterID){
                     case 0:
                         sb.Append("Baby Mario\nVeichle: ");
@@ -156,7 +156,7 @@ internal class MKWiiCharVeicRando
                         break;                        
                 }
             }
-            else if ((currentCharacterID => 8 && currentCharacterID <= 15) || currentCharacterID == 24 || currentCharacterID == 25)
+            else if ((currentCharacterID >= 8 && currentCharacterID <= 15) || currentCharacterID == 24 || currentCharacterID == 25)
             { //middleweight
                     switch (currentVeichleID){
                     case 0:
@@ -200,7 +200,7 @@ internal class MKWiiCharVeicRando
                         break;                        
                 }
             }
-            else if (currentCharacterID => 16 && currentCharacterID <= 23)
+            else if (currentCharacterID >= 16 && currentCharacterID <= 23)
             {  //heavyweight
                 switch (currentVeichleID){
                     case 0:
