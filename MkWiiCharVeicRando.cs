@@ -5,15 +5,18 @@ internal class MKWiiCharVeicRando
     {
         int currentCharacterID = 0;
         int currentVeichleID = 0;
+        int numberOfPlayers = 0;
         var rng = new Random();
-    InsertNoPlayers:
-        Console.WriteLine("Insert the number of players: ");
-        int numberOfPlayers = int.Parse(Console.ReadLine()!);
-        if (numberOfPlayers > 12 || numberOfPlayers <= 0)
-        {
-            Console.WriteLine("You have inserted an impossible amount of players. ");
-            goto InsertNoPlayers; //hate the game not the player
+
+        do{
+            Console.WriteLine("Insert the number of players: ");
+            numberOfPlayers = int.Parse(Console.ReadLine()!);
+            if (numberOfPlayers > 12 || numberOfPlayers <= 0)
+            {
+                Console.WriteLine("You have inserted an impossible amount of players. ");
+            }
         }
+        while (numberOfPlayers > 12 || numberOfPlayers <= 0);
 
         for (int i = 0; i < numberOfPlayers; i++)
         {
