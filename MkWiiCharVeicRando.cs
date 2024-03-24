@@ -6,22 +6,24 @@ internal class MKWiiCharVeicRando
         int currentCharacterID = 0;
         int currentVeichleID = 0;
         int numberOfPlayers = 0;
+        const int MAX_PLAYERS = 11;
+        const int MAX_VEICHLES = 25;
         var rng = new Random();
 
         do{
             Console.WriteLine("Insert the number of players: ");
             numberOfPlayers = int.Parse(Console.ReadLine()!);
-            if (numberOfPlayers > 12 || numberOfPlayers <= 0)
+            if (numberOfPlayers > MAX_PLAYERS || numberOfPlayers <= 0)
             {
                 Console.WriteLine("You have inserted an impossible amount of players. ");
             }
         }
-        while (numberOfPlayers > 12 || numberOfPlayers <= 0);
+        while (numberOfPlayers > MAX_PLAYERS || numberOfPlayers <= 0);
 
         for (int i = 0; i < numberOfPlayers; i++)
         {
-            currentCharacterID = rng.Next(0, 25);
-            currentVeichleID = rng.Next(0, 11);
+            currentCharacterID = rng.Next(0, MAX_VEICHLES);
+            currentVeichleID = rng.Next(0, MAX_PLAYERS);
             var sb = new System.Text.StringBuilder();
             int j = i+1; 
             sb.Append("Player no." + j + ":\nCharacter: ");
